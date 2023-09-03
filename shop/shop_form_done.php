@@ -139,6 +139,13 @@ session_regenerate_id(true);
 
       $dbh = null;
 
+      if($chumon == 'chumontouroku') {
+          print '会員登録が完了いたしました。<br />';
+          print '次回からメールアドレスとパスワードでログインしてください。<br />';
+          print 'ご注文が簡単にできるようになります。<br />';
+          print '<br />';
+      }
+
       $honbun .= "送料は無料です。\n";
       $honbun .= "--------------------\n";
       $honbun .= "\n";
@@ -146,6 +153,12 @@ session_regenerate_id(true);
       $honbun .= "ろくまる銀行 やさい支店 普通口座 １２３４５６７\n";
       $honbun .= "入金確認が取れ次第、梱包、発送させていただきます。\n";
       $honbun .= "\n";
+      if($chumon == 'chumontouroku') {
+          $honbun .= "会員登録が完了いたしました。\n";
+          $honbun .= "次回からメールアドレスとパスワードでログインしてください。\n";
+          $honbun .= "ご注文が簡単にできるようになります。\n";
+          $honbun .= "\n";
+      }
       $honbun .= "□□□□□□□□□□□□□□\n";
       $honbun .= "　～安心野菜のろくまる農園～\n";
       $honbun .= "\n";
@@ -153,8 +166,8 @@ session_regenerate_id(true);
       $honbun .= "電話 090-6060-xxxx\n";
       $honbun .= "メール info@rokumarunouen.co.jp\n";
       $honbun .= "□□□□□□□□□□□□□□\n";
-      print '<br />';
-      print nl2br($honbun);
+      //   print '<br />';
+      //   print nl2br($honbun);
 
       $title = 'ご注文ありがとうございます。';
       $header = 'From:info@rokumarunouen.co.jp';
