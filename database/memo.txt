@@ -1,0 +1,47 @@
+---------------------------------------------
+session2 P.51
+
+【テーブル名】
+mst_staff
+【カラム】
+code int primary AI #スタッフコード
+name varchar(15) #スタッフ名
+password varchar(32) #パスワード
+
+---------------------------------------------
+session3 P.111
+
+【テーブル名】
+mst_product
+【カラム】
+code int primary AI #商品コード
+name varchar(30) #商品名
+price int #価格
+gazou varchar(30) #画像ファイル名
+
+---------------------------------------------
+session7 P.254
+
+【テーブル名】注文テーブル
+dat_sales
+【カラム】
+code int primary AI #注文コード
+date TIMESTAMP #注文日時
+code_member int #会員コード
+name varchar(15) #お名前
+email varchar(50) #メールアドレス
+postal1 varchar(3) #郵便番号1
+postal2 varchar(4) #郵便番号2
+address varchar(50) #住所
+tel varchar(13) #電話番号
+
+【テーブル名】注文明細テーブル
+dat_sales_product
+【カラム】
+code int primary AI #注文明細コード
+code_sales int #注文コード
+code_product int #商品コード
+price int #価格
+quantity int #数量
+
+---------------------------------------------
